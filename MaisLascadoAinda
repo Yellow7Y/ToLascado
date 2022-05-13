@@ -1,0 +1,47 @@
+package Orientaçao_A_Objetos;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class produto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> estoque = new ArrayList<>();
+        String quantidade;
+        String descricao;
+        int i = 0;
+        while (true) {
+            System.out.print("QUANTIDADE DO PRODUTO " + i);
+            quantidade = scanner.nextLine();
+            System.out.print("DESCRIÇÃO DO PRODUTO " + i);
+            descricao = scanner.nextLine();
+            imprimirTraco();
+            if ("x".equals(quantidade) || "X".equals(quantidade)) {
+                break;
+            }
+            if ("x".equals(descricao) || "X".equals(descricao)) {
+                break;
+            }
+            descrever();
+            estoque.add("Estoque " + descrever);
+        }
+        escreverNoArquivo("C:\\Users\\Samuel\\Desktop\\Quadro de Anúncios\\Parte de Meio de Semana - JUNHO", linhas);
+        scanner.close();
+        System.out.println("FIM...");
+    }
+    private static void descrever() {
+        System.out.println(quantidade + descricao);
+    }
+
+    private static void imprimirTraco() {
+        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+    }
+    private static void escreverNoArquivo(String arquivo, ArrayList<String> linhas) throws IOException {
+        Path path = Paths.get(arquivo);
+        Files.write(path, linhas);
+    }
+}
