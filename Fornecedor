@@ -1,0 +1,19 @@
+package Principal;
+
+public class Fornecedor {
+    String descricao;
+    Double valor;
+    String data_de_vencimento;
+    String fornecedor;
+
+    public Fornecedor(String descricao, Double valor, String data_de_vencimento, String fornecedor) {
+        this.descricao = descricao;
+        this.valor = valor;
+        this.data_de_vencimento = data_de_vencimento;
+        this.fornecedor = fornecedor;
+    }
+
+    private static class ContaPagar {
+        public ContaPagar(Fornecedor mercado, String compras_do_mês, double v, String s) {
+        }
+}
