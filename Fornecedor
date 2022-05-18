@@ -1,19 +1,14 @@
-package Principal;
+package Contas_A_Pagar;
 
 public class Fornecedor {
-    String descricao;
-    Double valor;
-    String data_de_vencimento;
-    String fornecedor;
+    String nome;
 
-    public Fornecedor(String descricao, Double valor, String data_de_vencimento, String fornecedor) {
-        this.descricao = descricao;
-        this.valor = valor;
-        this.data_de_vencimento = data_de_vencimento;
-        this.fornecedor = fornecedor;
+    public Fornecedor() {
+        String nome = null;
+        this.nome = nome;
     }
 
-    private static class ContaPagar {
-        public ContaPagar(Fornecedor mercado, String compras_do_mês, double v, String s) {
-        }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }
