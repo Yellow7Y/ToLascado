@@ -1,47 +1,39 @@
-package Orientaçao_A_Objetos;
+package Contas_A_Pagar;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class produto {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        ArrayList<String> estoque = new ArrayList<>();
-        String quantidade;
-        String descricao;
-        int i = 0;
-        while (true) {
-            System.out.print("QUANTIDADE DO PRODUTO " + i);
-            quantidade = scanner.nextLine();
-            System.out.print("DESCRIÇÃO DO PRODUTO " + i);
-            descricao = scanner.nextLine();
-            imprimirTraco();
-            if ("x".equals(quantidade) || "X".equals(quantidade)) {
-                break;
-            }
-            if ("x".equals(descricao) || "X".equals(descricao)) {
-                break;
-            }
-            descrever();
-            estoque.add("Estoque " + descrever);
-        }
-        escreverNoArquivo("C:\\Users\\Samuel\\Desktop\\Quadro de Anúncios\\Parte de Meio de Semana - JUNHO", linhas);
-        scanner.close();
-        System.out.println("FIM...");
-    }
-    private static void descrever() {
-        System.out.println(quantidade + descricao);
+public class ContaPagar {
+    String descricao;
+    Double valor;
+   String dataDeVencimento;
+   
+    public ContaPagar() {
+        Fornecedor fornecedor = null;
+        String descricao = null;
+        double valor = 0;
+        String dataVencimento = null;
+        
     }
 
-    private static void imprimirTraco() {
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=");
+    public ContaPagar(Fornecedor fornecedor, String descricao, double valor, String dataDeVencimento) {
     }
-    private static void escreverNoArquivo(String arquivo, ArrayList<String> linhas) throws IOException {
-        Path path = Paths.get(arquivo);
-        Files.write(path, linhas);
+
+    public void pagar(){
+        String descricao = null;
+        Double valor = null;
+        String dataDeVencimento = null;
+        this.descricao = descricao;
+        this.valor = valor;
+        this.dataDeVencimento = dataDeVencimento;
+    }
+
+    public void setDescricao(String descricao) {
+    }
+
+    public void setValor(double valor) {
+    }
+
+    public void setDataVencimento(String dataDeVencimento) {
+    }
+
+    public void setFornecedor(Fornecedor fornecedor) {
     }
 }
