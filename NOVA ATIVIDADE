@@ -1,0 +1,18 @@
+package ExercícioSobrecarga;
+
+public class MaquinaCafe {
+
+    // ATRIBUTO
+    private int acucarDisponivel;
+    Double açucarDisponivel;
+
+    // MÉTODO COM AÇÚCAR
+    public void fazerCafe(TesteMaquinaCafe testeMaquinaCafe) {
+
+
+    }
+    // MÉTODO SEM AÇÚCAR
+    public void fazerCafe() {
+
+    }
+}
