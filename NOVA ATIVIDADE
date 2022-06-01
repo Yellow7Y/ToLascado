@@ -2,17 +2,32 @@ package ExercícioSobrecarga;
 
 public class MaquinaCafe {
 
-    // ATRIBUTO
-    private int acucarDisponivel;
-    Double açucarDisponivel;
+    // ATRIBUTO AÇUCAR DISPONÍVEL = 10 GRAMAS, SE NÃO TIVER AÇUCAR, SE FAZ SEM!
+    private int acucarDisponivel = 11;
+    int quantidadeAcucarInformado;
 
-    // MÉTODO COM AÇÚCAR
-    public void fazerCafe(TesteMaquinaCafe testeMaquinaCafe) {
-
-
+    // MÉTODO COM AÇÚCAR PADRÃO
+    String fazerCafe(int acucarDisponivel) {
+        this.acucarDisponivel = acucarDisponivel;
+        boolean b = acucarDisponivel <= 10;
+        String fazerCafe = "Fazendo cafezinho com 10 gramas de açucar.";
+        return fazerCafe;
     }
-    // MÉTODO SEM AÇÚCAR
-    public void fazerCafe() {
 
+    String fazerCafe(int acucarDisponivel, int quantidadeAcucarInformado) {
+        this.acucarDisponivel = acucarDisponivel;
+        this.quantidadeAcucarInformado = quantidadeAcucarInformado;
+        boolean c = acucarDisponivel >= quantidadeAcucarInformado;
+        String fazerCafe = "Fazendo cafezinho com " + quantidadeAcucarInformado + "gramas de açucar.";
+        return fazerCafe;
+    }
+
+    // MÉTODO SEM AÇÚCAR
+    static String fazerCafe() {
+        return "Não há açucar suficiente para fazer seu café.";
+    }
+
+    protected Double nextDouble() {
+        return null;
     }
 }
